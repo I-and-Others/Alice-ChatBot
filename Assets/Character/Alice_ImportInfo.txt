@@ -1,0 +1,8 @@
+logType=HighQuality
+generation=GameBase
+isLOD=false
+qualEyes=Basic
+qualHair=TwoPass
+bakeIsBaked=true
+bakeCustomShaders=true
+bakeSeparatePrefab=true
