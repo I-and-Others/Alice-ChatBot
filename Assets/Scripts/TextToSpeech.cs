@@ -44,17 +44,21 @@ public class TextToSpeech : MonoBehaviour
     private string placeholderText = "Please type text here and press enter.";
     private string waitingText = "Watson Text to Speech service is synthesizing the audio!";
     private string synthesizeMimeType = "audio/wav";
-    public TMP_InputField textInput;
+    public TMP_Text textInput;
     public AudioSource AvatarAudioSource;
     private bool _textEntered = false;
     private AudioClip _recording = null;
     private byte[] audioStream = null;
+    // We define two different status for TextToSpeech component.
+    public enum SpeakingStatus { Speaking, NotSpeaking };
+    public SpeakingStatus status;
     #endregion
 
     private void Start()
     {
         LogSystem.InstallDefaultReactors();
         Runnable.Run(CreateService());
+        status = SpeakingStatus.NotSpeaking;
     }
 
     void Update()
@@ -63,6 +67,17 @@ public class TextToSpeech : MonoBehaviour
         {
             Runnable.Run(ExampleSynthesize(textInput.text));
         }
+
+        // Change the status if audio playing is not playing anymore.
+        if(!AvatarAudioSource.isPlaying)
+        {
+            status = SpeakingStatus.NotSpeaking;
+        }
+    }
+
+    public SpeakingStatus GetStatus()
+    {
+        return status;
     }
 
     public void StartTextToSpeech()
@@ -131,6 +146,8 @@ public class TextToSpeech : MonoBehaviour
             AvatarAudioSource.loop = false;
             AvatarAudioSource.clip = clip;
             AvatarAudioSource.Play();
+            // Change the status after audio is playing.
+            status = SpeakingStatus.Speaking;
         }
     }
     #endregion
