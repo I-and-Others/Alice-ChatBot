@@ -1476,7 +1476,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1871,6 +1871,7 @@ GameObject:
   - component: {fileID: 1845599230}
   - component: {fileID: 1845599232}
   - component: {fileID: 1845599233}
+  - component: {fileID: 1845599234}
   m_Layer: 0
   m_Name: BotManager
   m_TagString: Untagged
@@ -1940,6 +1941,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textToSpeech: {fileID: 1845599230}
   speechToText: {fileID: 1845599232}
+  ibmWatson: {fileID: 1845599234}
+--- !u!114 &1845599234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845599229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df430b96de240954a99a1faf38af1265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iamApikey: XOv-r2Z9Yq76gs2uI5d3aZxPgU5qRnFnuF6nDYK8V-4a
+  serviceUrl: https://api.eu-de.assistant.watson.cloud.ibm.com/instances/b5d5334f-de42-4997-a31d-26b4a6c8922b
+  versionDate: 2021-11-27
+  assistantId: f6f54a7d-b531-426f-905c-46dd41f91a5b
+  textResponse: 
+  chatStatus: 2
 --- !u!1 &1950133381
 GameObject:
   m_ObjectHideFlags: 0
@@ -1987,7 +2007,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2072992981
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4766,7 +4786,14 @@ SkinnedMeshRenderer:
   - {fileID: 8787529584442815396}
   - {fileID: 6833033575395006350}
   - {fileID: 2354959361953600928}
-  m_BlendShapeWeights: []
+  m_BlendShapeWeights:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   m_RootBone: {fileID: 2354959361953600928}
   m_AABB:
     m_Center: {x: -0.016773757, y: 0.0033950899, z: -0.000009271316}
@@ -5857,7 +5884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emoterName: Emoter
   queueProcessor: {fileID: 9121559453888976985}
-  lipsyncEmphasisChance: 1
+  lipsyncEmphasisChance: 0.503
   lipsyncEmphasisEmotes: []
   repeaterEmotes: []
   randomEmotes: []
@@ -7689,7 +7716,7 @@ MonoBehaviour:
       inspFoldout: 0
       previewDisplayMode: 0
       collectionExpand: 0
-    isRandomEmote: 0
+    isRandomEmote: 1
     isLipsyncEmphasisEmote: 1
     isRepeaterEmote: 0
     repeaterDelay: 0
@@ -7699,9 +7726,375 @@ MonoBehaviour:
     isAlwaysEmphasisEmote: 0
     hasBeenFired: 0
     frac: 0.853
-  useRandomEmotes: 0
+  - expData:
+      name: smile
+      components:
+      - name: component 0
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.8
+        durationHold: 0.1
+        durationOff: 0.4
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 1
+        easing: 4
+        expressionHandler: 1
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      controllerVars:
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 3615797388820658638}
+        blendIndex: 33
+        minShape: 0
+        maxShape: 0.74
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      inspFoldout: 0
+      previewDisplayMode: 0
+      collectionExpand: 1
+    isRandomEmote: 1
+    isLipsyncEmphasisEmote: 0
+    isRepeaterEmote: 0
+    repeaterDelay: 0
+    startDelay: 0
+    isPersistent: 0
+    isHoldVariationExempt: 0
+    isAlwaysEmphasisEmote: 0
+    hasBeenFired: 0
+    frac: 1
+  - expData:
+      name: Pucker_L
+      components:
+      - name: component 0
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.8
+        durationHold: 0.1
+        durationOff: 0.4
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 1
+        easing: 4
+        expressionHandler: 1
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      - name: component 1
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.8
+        durationHold: 0.1
+        durationOff: 0.4
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 1
+        easing: 4
+        expressionHandler: 1
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      controllerVars:
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 3615797388820658638}
+        blendIndex: 40
+        minShape: 0
+        maxShape: 0.74
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 3615797388820658638}
+        blendIndex: 62
+        minShape: 0
+        maxShape: 0.74
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      inspFoldout: 0
+      previewDisplayMode: 0
+      collectionExpand: 1
+    isRandomEmote: 1
+    isLipsyncEmphasisEmote: 0
+    isRepeaterEmote: 0
+    repeaterDelay: 0
+    startDelay: 0
+    isPersistent: 0
+    isHoldVariationExempt: 0
+    isAlwaysEmphasisEmote: 0
+    hasBeenFired: 0
+    frac: 1
+  - expData:
+      name: Pucker_R
+      components:
+      - name: component 0
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.8
+        durationHold: 0.1
+        durationOff: 0.4
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 1
+        easing: 4
+        expressionHandler: 1
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      - name: component 1
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.8
+        durationHold: 0.1
+        durationOff: 0.4
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 1
+        easing: 4
+        expressionHandler: 1
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      controllerVars:
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 3615797388820658638}
+        blendIndex: 40
+        minShape: 0
+        maxShape: 0.74
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 3615797388820658638}
+        blendIndex: 63
+        minShape: 0
+        maxShape: 0.74
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      inspFoldout: 0
+      previewDisplayMode: 0
+      collectionExpand: 1
+    isRandomEmote: 1
+    isLipsyncEmphasisEmote: 0
+    isRepeaterEmote: 0
+    repeaterDelay: 0
+    startDelay: 0
+    isPersistent: 0
+    isHoldVariationExempt: 0
+    isAlwaysEmphasisEmote: 0
+    hasBeenFired: 0
+    frac: 1
+  useRandomEmotes: 1
   isChancePerEmote: 1
-  numRandomEmotesPerCycle: 0
+  numRandomEmotesPerCycle: 1
   numRandomEmphasizersPerCycle: 4
   randomEmoteMinTimer: 1
   randomEmoteMaxTimer: 2
@@ -7716,7 +8109,7 @@ MonoBehaviour:
   inspSalsaLinked: 0
   inspStateFoldoutProcessing: 0
   inspStateFoldoutSettings: 0
-  inspStateFoldoutEmotes: 0
+  inspStateFoldoutEmotes: 1
   inspCollectionDisplayMode: 0
 --- !u!82 &9121559453888976983
 AudioSource:
@@ -7835,7 +8228,7 @@ MonoBehaviour:
   emphasizerTrigger: 0
   analysisValue: 0
   sampleSize: 512
-  audioUpdateDelay: 0.095
+  audioUpdateDelay: 0.17314
   playheadBias: 2800
   autoAdjustAnalysis: 1
   autoAdjustMicrophone: 0
@@ -7855,9 +8248,9 @@ MonoBehaviour:
   advDynRollback: 0.3
   globalFrac: 1
   usePersistence: 0
-  useTimingsOverride: 1
-  globalDurON: 0.125
-  globalDurOFF: 0.06
+  useTimingsOverride: 0
+  globalDurON: 0.22
+  globalDurOFF: 0.1804
   globalDurOffBalance: -0.18
   originalUpdateDelay: 0
   globalNuanceBalance: -0.213
@@ -7873,9 +8266,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -7895,9 +8288,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -7917,9 +8310,31 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 0
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 0
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      - name: Mouth_Bottom_Lip_Down
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.22
+        durationHold: 0
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -8057,9 +8472,50 @@ MonoBehaviour:
         textures: []
         materialRenderer: {fileID: 0}
         materials: []
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 3615797388820658638}
+        blendIndex: 51
+        minShape: 0
+        maxShape: 0.45
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
       inspFoldout: 0
       previewDisplayMode: 0
-      collectionExpand: 0
+      collectionExpand: 1
     trigger: 0
   - expData:
       name: f
@@ -8070,9 +8526,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -8092,9 +8548,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -8114,9 +8570,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -8136,9 +8592,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -8158,9 +8614,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -8393,9 +8849,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -8415,9 +8871,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -8437,9 +8893,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -8459,9 +8915,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -8471,6 +8927,28 @@ MonoBehaviour:
         useOffset: 0
         useOffsetFollow: 1
         inspFoldout: 0
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      - name: Mouth_Bottom_Lip_Down
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.22
+        durationHold: 0
+        durationOff: 0.1804
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 0
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
         enabled: 1
         isBonePreviewUpdated: 0
         frac: 1
@@ -8640,6 +9118,47 @@ MonoBehaviour:
         textures: []
         materialRenderer: {fileID: 0}
         materials: []
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 3615797388820658638}
+        blendIndex: 51
+        minShape: 0
+        maxShape: 0.06
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
       inspFoldout: 0
       previewDisplayMode: 0
       collectionExpand: 0
@@ -8653,9 +9172,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -8675,9 +9194,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -8697,9 +9216,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -8719,9 +9238,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -8741,9 +9260,31 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 0
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 0
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      - name: Mouth_Bottom_Lip_Down
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.22
+        durationHold: 0
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -8963,6 +9504,47 @@ MonoBehaviour:
         textures: []
         materialRenderer: {fileID: 0}
         materials: []
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 3615797388820658638}
+        blendIndex: 51
+        minShape: 0
+        maxShape: 0.1
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
       inspFoldout: 0
       previewDisplayMode: 0
       collectionExpand: 0
@@ -8976,9 +9558,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -8998,9 +9580,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -9020,9 +9602,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -9042,9 +9624,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -9064,9 +9646,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -9076,6 +9658,28 @@ MonoBehaviour:
         useOffset: 0
         useOffsetFollow: 1
         inspFoldout: 0
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      - name: Mouth_Bottom_Lip_Down
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.22
+        durationHold: 0
+        durationOff: 0.1804
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 0
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
         enabled: 1
         isBonePreviewUpdated: 0
         frac: 1
@@ -9286,6 +9890,47 @@ MonoBehaviour:
         textures: []
         materialRenderer: {fileID: 0}
         materials: []
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 3615797388820658638}
+        blendIndex: 51
+        minShape: 0
+        maxShape: 0.1
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
       inspFoldout: 0
       previewDisplayMode: 0
       collectionExpand: 0
@@ -9299,9 +9944,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -9321,9 +9966,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -9343,9 +9988,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -9365,9 +10010,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -9387,9 +10032,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -9409,9 +10054,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -9685,9 +10330,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -9707,9 +10352,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -9729,9 +10374,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -9751,9 +10396,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -9773,9 +10418,9 @@ MonoBehaviour:
         emoteControlType: 0
         eyesControlType: 1
         durationDelay: 0
-        durationOn: 0.11
+        durationOn: 0.22
         durationHold: 0
-        durationOff: 0.06
+        durationOff: 0.1804
         isSmoothDisable: 0
         isPersistent: 0
         expressionType: 0
@@ -10006,7 +10651,7 @@ MonoBehaviour:
   useAudioAnalysis: 1
   needAudioSource: 1
   inspStateFoldoutProcessing: 0
-  inspStateFoldoutSettings: 0
+  inspStateFoldoutSettings: 1
   inspStateFoldoutVisemes: 0
   inspCollectionDisplayMode: 0
   inspAnalysisDisplay: 0

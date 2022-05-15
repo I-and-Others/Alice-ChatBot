@@ -80,9 +80,9 @@ public class TextToSpeech : MonoBehaviour
         return status;
     }
 
-    public void StartTextToSpeech()
+    public void StartTextToSpeech(string message)
     {
-        Runnable.Run(ExampleSynthesize(textInput.text));
+        Runnable.Run(ExampleSynthesize(message));
     }
 
     private IEnumerator CreateService()
