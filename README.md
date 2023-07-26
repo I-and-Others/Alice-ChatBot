@@ -10,3 +10,6 @@ You may need [Character Creator 3](https://www.reallusion.com/character-creator/
 3. Open project in Unity.
 4. Paste your IBM API keys and service urls to TextToSpeech, SpeechToText and IBMWatson components under hierarchy menu.
 5. Press play!
+
+![Preview](https://i.ibb.co/jvtPQtk/image-2023-07-27-001530009.png)
+
